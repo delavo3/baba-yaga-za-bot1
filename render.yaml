@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: baba-yaga-za-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+      - key: OPENAI_API_KEY
